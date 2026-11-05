@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Josh.P — Official Artist Page</title>
+<meta name="description" content="Josh.P — Electronic music with purpose, where soul meets sound. Deep House, Progressive House, Melodic Techno and Electro Hip Metal from Queens, New York. Powered by SwMusic.">
+<meta property="og:title" content="Josh.P — Official Artist Page">
+<meta property="og:description" content="Electronic music with purpose, where soul meets sound.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://joshpartist.com/">
+<meta property="og:image" content="https://joshpartist.com/retrato.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎧</text></svg>">
+<style>
+  :root{
+    --bg:#07070d; --bg2:#0d0d18; --card:#12121f;
+    --ink:#f2f2f7; --muted:#a7a7bb;
+    --cyan:#29e6d8; --pink:#ff5fa2; --gold:#ffc65c;
+    --line:rgba(255,255,255,.09);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:"Avenir Next","Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+  a{color:var(--cyan);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  /* NAV */
+  nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(7,7,13,.72);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{font-weight:800;letter-spacing:.45em;font-size:1.05rem;color:var(--ink)}
+  .brand:hover{text-decoration:none}
+  .brand span{color:var(--cyan)}
+  nav .links{display:flex;gap:26px;font-size:.92rem}
+  nav .links a{color:var(--muted)}
+  nav .links a:hover{color:var(--ink);text-decoration:none}
+  @media(max-width:640px){nav .links{gap:16px;font-size:.85rem}}
+
+  /* HERO */
+  header.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
+  header.hero .bgimg{position:absolute;inset:0;background:url('paris.jpg') center 22%/cover no-repeat;filter:saturate(1.05)}
+  header.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,7,13,.45) 0%,rgba(7,7,13,.15) 40%,rgba(7,7,13,.92) 88%,var(--bg) 100%)}
+  header.hero .content{position:relative;width:100%;padding:120px 0 56px}
+  .kicker{color:var(--cyan);letter-spacing:.35em;font-size:.8rem;font-weight:700;text-transform:uppercase}
+  h1.name{font-size:clamp(3rem,11vw,7rem);line-height:1.02;font-weight:900;letter-spacing:.18em;margin:.15em 0 .1em;text-shadow:0 6px 40px rgba(0,0,0,.55)}
+  h1.name .p{color:var(--pink)}
+  .tagline{font-size:clamp(1.05rem,2.6vw,1.45rem);color:#e9e9f2;max-width:640px}
+  .tagline em{color:var(--gold);font-style:normal}
+  .cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;padding:13px 24px;border-radius:999px;font-weight:700;font-size:.95rem;border:1px solid transparent}
+  .btn:hover{text-decoration:none;transform:translateY(-1px)}
+  .btn-primary{background:linear-gradient(90deg,var(--cyan),#25b7ff);color:#04121a}
+  .btn-ghost{border-color:rgba(255,255,255,.35);color:var(--ink);background:rgba(255,255,255,.06)}
+  .socials{margin-top:26px;display:flex;gap:18px;flex-wrap:wrap;font-size:.92rem}
+  .socials a{color:var(--muted)}
+  .socials a:hover{color:var(--cyan);text-decoration:none}
+
+  section{padding:76px 0}
+  section.alt{background:var(--bg2);border-block:1px solid var(--line)}
+  h2{font-size:clamp(1.6rem,4vw,2.3rem);letter-spacing:.06em;margin-bottom:8px}
+  .sub{color:var(--muted);margin-bottom:34px;max-width:640px}
+
+  /* MUSIC */
+  .feature{display:grid;grid-template-columns:340px 1fr;gap:28px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;margin-bottom:30px}
+  .feature img{width:100%;border-radius:12px;display:block}
+  .feature h3{font-size:1.5rem;margin-bottom:6px}
+  .feature p{color:var(--muted)}
+  @media(max-width:760px){.feature{grid-template-columns:1fr}}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+  .track{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+  .track h3{font-size:1.08rem;margin-bottom:4px}
+  .track p{color:var(--muted);font-size:.92rem;margin-bottom:14px}
+  iframe.embed{width:100%;height:152px;border:0;border-radius:12px;background:#000}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .chip{border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:.8rem;color:var(--muted)}
+
+  /* ABOUT */
+  .about{display:grid;grid-template-columns:320px 1fr;gap:34px;align-items:start}
+  .about img{width:100%;border-radius:16px;display:block}
+  @media(max-width:760px){.about{grid-template-columns:1fr}}
+  .about p{color:#d8d8e4;margin-bottom:14px}
+  .about p strong{color:var(--ink)}
+
+  /* PHOTOS */
+  .photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .photos figure{border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+  .photos img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:1/1}
+  .photos .tall img{aspect-ratio:3/4}
+
+  /* CONTACT */
+  .contact-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center}
+  .contact-card p{color:var(--muted);margin-bottom:18px}
+
+  footer{border-top:1px solid var(--line);padding:34px 0 44px;color:var(--muted);font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .wm{letter-spacing:.4em;color:#cfcfe0}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">JOSH<span>.</span>P</a>
+    <div class="links">
+      <a href="#music">Music</a>
+      <a href="#about">About</a>
+      <a href="#photos">Photos</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="bgimg"></div>
+  <div class="shade"></div>
+  <div class="content">
+    <div class="wrap">
+      <div class="kicker">Official Artist Page</div>
+      <h1 class="name">JOSH<span class="p">.</span>P</h1>
+      <p class="tagline">Electronic music with purpose, where soul meets sound. <em>More than rhythm, it's a message.</em></p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://open.spotify.com/artist/2bjhXRDQhdMYNQyAMnSoBD" target="_blank" rel="noopener">▶ Listen on Spotify</a>
+        <a class="btn btn-ghost" href="https://soundcloud.com/josh-poficial" target="_blank" rel="noopener">SoundCloud</a>
+      </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/josh.p.artist" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=1094753230390447" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://open.spotify.com/artist/2bjhXRDQhdMYNQyAMnSoBD" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://soundcloud.com/josh-poficial" target="_blank" rel="noopener">SoundCloud</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="music">
+  <div class="wrap">
+    <h2>Music</h2>
+    <p class="sub">Deep and progressive house, melodic techno — and a genre of his own creation: Electro Hip Metal.</p>
+
+    <div class="feature">
+      <img src="playa.jpg" alt="Josh.P">
+      <div>
+        <div class="kicker" style="letter-spacing:.25em">Latest Release</div>
+        <h3>Leading Me Back Home</h3>
+        <p>A progressive house journey about finding your way back — out now on all platforms.</p>
+        <div class="chips">
+          <span class="chip">Progressive House</span>
+          <span class="chip">SwMusic</span>
+          <span class="chip">2026</span>
+        </div>
+        <p style="margin-top:16px"><a href="https://open.spotify.com/track/4DrEgLK8X43qVzMHh3jxce" target="_blank" rel="noopener">Open in Spotify →</a></p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="track">
+        <h3>Leading Me Back Home</h3>
+        <p>Progressive House · Single</p>
+        <iframe class="embed" src="https://open.spotify.com/embed/track/4DrEgLK8X43qVzMHh3jxce?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Leading Me Back Home on Spotify"></iframe>
+      </div>
+      <div class="track">
+        <h3>This Rhythm Never Ends</h3>
+        <p>Single</p>
+        <iframe class="embed" src="https://open.spotify.com/embed/track/5r8jtkCZ7M5PDYV9ZpBb9l?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="This Rhythm Never Ends on Spotify"></iframe>
+      </div>
+      <div class="track">
+        <h3>Run Into The Sun</h3>
+        <p>Progressive House · Single</p>
+        <iframe class="embed" src="https://open.spotify.com/embed/track/0HETPQfD66s5NyWpcoTE8E?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Run Into The Sun on Spotify"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p class="sub">Queens, New York.</p>
+    <div class="about">
+      <img src="retrato.jpg" alt="Josh.P portrait">
+      <div>
+        <p><strong>Josh.P</strong> is an electronic music artist and producer based in Queens, New York. His sound moves through <strong>Deep House, Progressive House and Melodic Techno</strong>, always carrying his Latin roots and an emotional, cinematic touch — piano and guitar lines that sing over the beat.</p>
+        <p>He is the founder of <strong>SwMusic</strong>, his own music platform and creative ecosystem, and the creator of <strong>Electro Hip Metal</strong> — a fusion of industrial techno, hip-hop rap and gospel metal introduced with <em>“No Kings in the Dark.”</em></p>
+        <p>For Josh.P, music is never just rhythm: <strong>it's a message</strong>.</p>
+        <div class="chips">
+          <span class="chip">Deep House</span>
+          <span class="chip">Progressive House</span>
+          <span class="chip">Melodic Techno</span>
+          <span class="chip">Electro Hip Metal</span>
+          <span class="chip">Folkor Dance</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="photos">
+  <div class="wrap">
+    <h2>Photos</h2>
+    <p class="sub">Press photos — free to use with credit “Josh.P”.</p>
+    <div class="photos">
+      <figure><img src="retrato.jpg" alt="Josh.P — portrait"></figure>
+      <figure><img src="playa.jpg" alt="Josh.P — beach session"></figure>
+      <figure class="tall"><img src="paris.jpg" alt="Josh.P — Paris"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="sub">Booking, press and collaborations.</p>
+    <div class="contact-card">
+      <p>For press, booking and business inquiries:</p>
+      <a class="btn btn-primary" href="mailto:user.uid@sw-music.com">user.uid@sw-music.com</a>
+      <div class="socials" style="justify-content:center;margin-top:24px">
+        <a href="https://www.instagram.com/josh.p.artist" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=1094753230390447" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://open.spotify.com/artist/2bjhXRDQhdMYNQyAMnSoBD" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://soundcloud.com/josh-poficial" target="_blank" rel="noopener">SoundCloud</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Josh.P — All rights reserved.</div>
+    <div class="wm">POWERED BY SWMUSIC</div>
+  </div>
+</footer>
+
+</body>
+</html>
