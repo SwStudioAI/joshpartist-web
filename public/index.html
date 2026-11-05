@@ -4,13 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Josh.P — Official Artist Page</title>
-<meta name="description" content="Josh.P — Electronic music with purpose, where soul meets sound. Deep House, Progressive House, Melodic Techno and Electro Hip Metal from Queens, New York. Powered by SwMusic.">
+<meta name="description" content="Josh.P — Electronic music with purpose, where soul meets sound. Deep House, Progressive House, Melodic Techno and Electro Hip Metal from Queens, New York. Founder of SwMusic.">
 <meta property="og:title" content="Josh.P — Official Artist Page">
-<meta property="og:description" content="Electronic music with purpose, where soul meets sound.">
+<meta property="og:description" content="Electronic music with purpose, where soul meets sound. More than rhythm, it's a message.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://joshpartist.com/">
-<meta property="og:image" content="https://joshpartist.com/retrato.jpg">
+<meta property="og:image" content="https://joshpartist.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎧</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Josh.P",
+  "url": "https://joshpartist.com/",
+  "image": "https://joshpartist.com/og.jpg",
+  "description": "Electronic music artist and producer based in Queens, New York. Deep House, Progressive House, Melodic Techno and Electro Hip Metal. Founder of SwMusic.",
+  "genre": ["Deep House", "Progressive House", "Melodic Techno", "Electro Hip Metal"],
+  "foundingLocation": "Queens, New York, USA",
+  "email": "user.uid@sw-music.com",
+  "sameAs": [
+    "https://open.spotify.com/artist/2bjhXRDQhdMYNQyAMnSoBD",
+    "https://www.instagram.com/josh.p.artist",
+    "https://www.facebook.com/1094753230390447",
+    "https://soundcloud.com/josh-poficial",
+    "https://sw-music.com"
+  ]
+}
+</script>
 <style>
   :root{
     --bg:#07070d; --bg2:#0d0d18; --card:#12121f;
@@ -25,74 +46,83 @@
   a:hover{text-decoration:underline}
   .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 
-  /* NAV */
   nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(7,7,13,.72);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-  .brand{font-weight:800;letter-spacing:.45em;font-size:1.05rem;color:var(--ink)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:14px}
+  .brand{font-weight:800;letter-spacing:.45em;font-size:1.05rem;color:var(--ink);white-space:nowrap}
   .brand:hover{text-decoration:none}
-  .brand span{color:var(--cyan)}
-  nav .links{display:flex;gap:26px;font-size:.92rem}
+  .brand span{color:var(--pink)}
+  nav .links{display:flex;gap:24px;font-size:.92rem;align-items:center}
   nav .links a{color:var(--muted)}
   nav .links a:hover{color:var(--ink);text-decoration:none}
-  @media(max-width:640px){nav .links{gap:16px;font-size:.85rem}}
+  nav .links a.navcta{color:#04121a;background:linear-gradient(90deg,var(--cyan),#25b7ff);padding:7px 16px;border-radius:999px;font-weight:700}
+  @media(max-width:720px){nav .links{gap:14px;font-size:.84rem}nav .links a.hideS{display:none}}
 
-  /* HERO */
-  header.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
-  header.hero .bgimg{position:absolute;inset:0;background:url('paris.jpg') center 22%/cover no-repeat;filter:saturate(1.05)}
-  header.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,7,13,.45) 0%,rgba(7,7,13,.15) 40%,rgba(7,7,13,.92) 88%,var(--bg) 100%)}
-  header.hero .content{position:relative;width:100%;padding:120px 0 56px}
+  header.hero{position:relative;min-height:96vh;display:flex;align-items:flex-end;overflow:hidden}
+  header.hero .bgimg{position:absolute;inset:0;background:url('paris.jpg') center 22%/cover no-repeat}
+  header.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,7,13,.5) 0%,rgba(7,7,13,.18) 38%,rgba(7,7,13,.94) 88%,var(--bg) 100%)}
+  header.hero .content{position:relative;width:100%;padding:130px 0 60px}
   .kicker{color:var(--cyan);letter-spacing:.35em;font-size:.8rem;font-weight:700;text-transform:uppercase}
-  h1.name{font-size:clamp(3rem,11vw,7rem);line-height:1.02;font-weight:900;letter-spacing:.18em;margin:.15em 0 .1em;text-shadow:0 6px 40px rgba(0,0,0,.55)}
+  h1.name{font-size:clamp(3.2rem,12vw,7.6rem);line-height:1.02;font-weight:900;letter-spacing:.16em;margin:.12em 0 .08em;text-shadow:0 6px 44px rgba(0,0,0,.6)}
   h1.name .p{color:var(--pink)}
-  .tagline{font-size:clamp(1.05rem,2.6vw,1.45rem);color:#e9e9f2;max-width:640px}
+  .tagline{font-size:clamp(1.05rem,2.6vw,1.5rem);color:#ececf4;max-width:660px}
   .tagline em{color:var(--gold);font-style:normal}
-  .cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
-  .btn{display:inline-block;padding:13px 24px;border-radius:999px;font-weight:700;font-size:.95rem;border:1px solid transparent}
+  .cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;padding:13px 24px;border-radius:999px;font-weight:700;font-size:.95rem;border:1px solid transparent;transition:transform .15s}
   .btn:hover{text-decoration:none;transform:translateY(-1px)}
   .btn-primary{background:linear-gradient(90deg,var(--cyan),#25b7ff);color:#04121a}
   .btn-ghost{border-color:rgba(255,255,255,.35);color:var(--ink);background:rgba(255,255,255,.06)}
-  .socials{margin-top:26px;display:flex;gap:18px;flex-wrap:wrap;font-size:.92rem}
+  .socials{display:flex;gap:18px;flex-wrap:wrap;font-size:.92rem}
   .socials a{color:var(--muted)}
   .socials a:hover{color:var(--cyan);text-decoration:none}
+  header .socials{margin-top:28px}
 
-  section{padding:76px 0}
+  section{padding:78px 0}
   section.alt{background:var(--bg2);border-block:1px solid var(--line)}
   h2{font-size:clamp(1.6rem,4vw,2.3rem);letter-spacing:.06em;margin-bottom:8px}
-  .sub{color:var(--muted);margin-bottom:34px;max-width:640px}
+  .sub{color:var(--muted);margin-bottom:34px;max-width:660px}
 
-  /* MUSIC */
-  .feature{display:grid;grid-template-columns:340px 1fr;gap:28px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;margin-bottom:30px}
+  .feature{display:grid;grid-template-columns:340px 1fr;gap:28px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
   .feature img{width:100%;border-radius:12px;display:block}
-  .feature h3{font-size:1.5rem;margin-bottom:6px}
+  .feature h3{font-size:1.55rem;margin:6px 0}
   .feature p{color:var(--muted)}
   @media(max-width:760px){.feature{grid-template-columns:1fr}}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+  iframe.embed{width:100%;border:0;border-radius:12px;background:#000}
+  iframe.album{height:352px}
+  iframe.track{height:152px}
+  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px;margin-bottom:22px}
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
   .track{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
   .track h3{font-size:1.08rem;margin-bottom:4px}
   .track p{color:var(--muted);font-size:.92rem;margin-bottom:14px}
-  iframe.embed{width:100%;height:152px;border:0;border-radius:12px;background:#000}
+  .track p:last-child{margin-bottom:0}
+  .concept{border:1px solid rgba(255,95,162,.35);background:linear-gradient(160deg,rgba(255,95,162,.09),rgba(41,230,216,.05))}
+  .concept h3{color:var(--ink)}
+  .concept .big{font-size:1.25rem;color:var(--ink);font-weight:800;letter-spacing:.04em}
+  .center{text-align:center;margin-top:30px}
   .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
   .chip{border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:.8rem;color:var(--muted)}
 
-  /* ABOUT */
   .about{display:grid;grid-template-columns:320px 1fr;gap:34px;align-items:start}
   .about img{width:100%;border-radius:16px;display:block}
   @media(max-width:760px){.about{grid-template-columns:1fr}}
   .about p{color:#d8d8e4;margin-bottom:14px}
   .about p strong{color:var(--ink)}
+  .highlight{border-left:3px solid var(--gold);padding:4px 0 4px 16px;color:#e9e9f2;margin:20px 0}
 
-  /* PHOTOS */
-  .photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-bottom:28px}
   .photos figure{border-radius:16px;overflow:hidden;border:1px solid var(--line)}
   .photos img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:1/1}
   .photos .tall img{aspect-ratio:3/4}
 
-  /* CONTACT */
-  .contact-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:center}
-  .contact-card p{color:var(--muted);margin-bottom:18px}
+  .roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+  .role{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .role h3{font-size:1.02rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
+  .role p{color:var(--muted);font-size:.94rem;margin-bottom:12px}
+  .live-line{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;text-align:center}
+  .live-line p{color:var(--muted);margin-bottom:18px}
 
-  footer{border-top:1px solid var(--line);padding:34px 0 44px;color:var(--muted);font-size:.9rem}
-  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer{border-top:1px solid var(--line);padding:36px 0 46px;color:var(--muted);font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
   .wm{letter-spacing:.4em;color:#cfcfe0}
 </style>
 </head>
@@ -103,9 +133,11 @@
     <a class="brand" href="#top">JOSH<span>.</span>P</a>
     <div class="links">
       <a href="#music">Music</a>
+      <a href="#live" class="hideS">Live</a>
       <a href="#about">About</a>
-      <a href="#photos">Photos</a>
+      <a href="#press" class="hideS">Press</a>
       <a href="#contact">Contact</a>
+      <a class="navcta" href="#latest">▶ Listen</a>
     </div>
   </div>
 </nav>
@@ -119,12 +151,12 @@
       <h1 class="name">JOSH<span class="p">.</span>P</h1>
       <p class="tagline">Electronic music with purpose, where soul meets sound. <em>More than rhythm, it's a message.</em></p>
       <div class="cta">
-        <a class="btn btn-primary" href="https://open.spotify.com/artist/2bjhXRDQhdMYNQyAMnSoBD" target="_blank" rel="noopener">▶ Listen on Spotify</a>
-        <a class="btn btn-ghost" href="https://soundcloud.com/josh-poficial" target="_blank" rel="noopener">SoundCloud</a>
+        <a class="btn btn-primary" href="#latest">▶ Listen now</a>
+        <a class="btn btn-ghost" href="#music">Discography</a>
       </div>
       <div class="socials">
         <a href="https://www.instagram.com/josh.p.artist" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.facebook.com/profile.php?id=1094753230390447" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.facebook.com/1094753230390447" target="_blank" rel="noopener">Facebook</a>
         <a href="https://open.spotify.com/artist/2bjhXRDQhdMYNQyAMnSoBD" target="_blank" rel="noopener">Spotify</a>
         <a href="https://soundcloud.com/josh-poficial" target="_blank" rel="noopener">SoundCloud</a>
       </div>
@@ -132,42 +164,76 @@
   </div>
 </header>
 
-<section id="music">
+<section id="latest" style="padding-top:30px">
   <div class="wrap">
-    <h2>Music</h2>
-    <p class="sub">Deep and progressive house, melodic techno — and a genre of his own creation: Electro Hip Metal.</p>
-
     <div class="feature">
       <img src="playa.jpg" alt="Josh.P">
       <div>
         <div class="kicker" style="letter-spacing:.25em">Latest Release</div>
         <h3>Leading Me Back Home</h3>
         <p>A progressive house journey about finding your way back — out now on all platforms.</p>
-        <div class="chips">
-          <span class="chip">Progressive House</span>
-          <span class="chip">SwMusic</span>
-          <span class="chip">2026</span>
+        <div style="margin:18px 0">
+          <iframe class="embed track" src="https://open.spotify.com/embed/track/4DrEgLK8X43qVzMHh3jxce?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Leading Me Back Home on Spotify"></iframe>
         </div>
-        <p style="margin-top:16px"><a href="https://open.spotify.com/track/4DrEgLK8X43qVzMHh3jxce" target="_blank" rel="noopener">Open in Spotify →</a></p>
+        <div class="cta" style="margin-top:6px">
+          <a class="btn btn-primary" href="https://open.spotify.com/track/4DrEgLK8X43qVzMHh3jxce" target="_blank" rel="noopener">Open in Spotify</a>
+          <a class="btn btn-ghost" href="https://hypeddit.com/joshp/leadingmebackhome" target="_blank" rel="noopener">Free download</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="music" class="alt">
+  <div class="wrap">
+    <h2>Music</h2>
+    <p class="sub">Listen without leaving the page. Albums and essential singles — the full catalog lives on SoundCloud.</p>
+
+    <div class="grid2">
+      <div class="track">
+        <h3>We Rise Again (Radio Edit)</h3>
+        <p>Album · Spotify</p>
+        <iframe class="embed album" src="https://open.spotify.com/embed/album/3OsFJgp1OymN5cQ7zpQDyR?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="We Rise Again (Radio Edit) on Spotify"></iframe>
+      </div>
+      <div class="track">
+        <h3>KISS ME (Music From Another World)</h3>
+        <p>Album · Spotify</p>
+        <iframe class="embed album" src="https://open.spotify.com/embed/album/2OFHEqZzwW884wRqvpWkAp?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="KISS ME on Spotify"></iframe>
       </div>
     </div>
 
-    <div class="grid">
-      <div class="track">
-        <h3>Leading Me Back Home</h3>
-        <p>Progressive House · Single</p>
-        <iframe class="embed" src="https://open.spotify.com/embed/track/4DrEgLK8X43qVzMHh3jxce?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Leading Me Back Home on Spotify"></iframe>
-      </div>
+    <div class="grid3">
       <div class="track">
         <h3>This Rhythm Never Ends</h3>
         <p>Single</p>
-        <iframe class="embed" src="https://open.spotify.com/embed/track/5r8jtkCZ7M5PDYV9ZpBb9l?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="This Rhythm Never Ends on Spotify"></iframe>
+        <iframe class="embed track" src="https://open.spotify.com/embed/track/5r8jtkCZ7M5PDYV9ZpBb9l?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="This Rhythm Never Ends on Spotify"></iframe>
       </div>
       <div class="track">
         <h3>Run Into The Sun</h3>
         <p>Progressive House · Single</p>
-        <iframe class="embed" src="https://open.spotify.com/embed/track/0HETPQfD66s5NyWpcoTE8E?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Run Into The Sun on Spotify"></iframe>
+        <iframe class="embed track" src="https://open.spotify.com/embed/track/0HETPQfD66s5NyWpcoTE8E?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Run Into The Sun on Spotify"></iframe>
       </div>
+      <div class="track concept">
+        <div class="kicker" style="letter-spacing:.22em;color:var(--pink)">New genre</div>
+        <p class="big" style="margin:8px 0 6px">ELECTRO HIP METAL</p>
+        <h3>No Kings in the Dark</h3>
+        <p>Industrial techno × hip-hop rap × gospel metal. A genre created by Josh.P: in the darkness there is no king — there is a prison, and one who comes back to set the captives free.</p>
+      </div>
+    </div>
+
+    <div class="center">
+      <a class="btn btn-ghost" href="https://soundcloud.com/josh-poficial" target="_blank" rel="noopener">Full catalog on SoundCloud →</a>
+    </div>
+  </div>
+</section>
+
+<section id="live">
+  <div class="wrap">
+    <h2>Live</h2>
+    <p class="sub">Tour dates and shows.</p>
+    <div class="live-line">
+      <p>New dates to be announced soon. For booking inquiries, write to us:</p>
+      <a class="btn btn-primary" href="mailto:user.uid@sw-music.com?subject=Booking%20—%20Josh.P">Booking — user.uid@sw-music.com</a>
     </div>
   </div>
 </section>
@@ -179,13 +245,15 @@
     <div class="about">
       <img src="retrato.jpg" alt="Josh.P portrait">
       <div>
-        <p><strong>Josh.P</strong> is an electronic music artist and producer based in Queens, New York. His sound moves through <strong>Deep House, Progressive House and Melodic Techno</strong>, always carrying his Latin roots and an emotional, cinematic touch — piano and guitar lines that sing over the beat.</p>
-        <p>He is the founder of <strong>SwMusic</strong>, his own music platform and creative ecosystem, and the creator of <strong>Electro Hip Metal</strong> — a fusion of industrial techno, hip-hop rap and gospel metal introduced with <em>“No Kings in the Dark.”</em></p>
-        <p>For Josh.P, music is never just rhythm: <strong>it's a message</strong>.</p>
+        <p><strong>Josh.P</strong> is an electronic music artist and producer based in Queens, New York, and the founder of <strong>SwMusic</strong> — an independent platform spanning streaming, radio, and immersive musical experiences. He creates without compromise, blending deep house, progressive house, melodic techno, and Latin fusion into something deeply personal: emotive piano lines, rolling basslines, and synths that lift somewhere higher.</p>
+        <p>Through SwMusic he also builds the technology behind the music — a platform with Android, iOS and web apps. And with <strong>“No Kings in the Dark”</strong> he introduced <strong>Electro Hip Metal</strong>, a genre of his own creation.</p>
+        <div class="highlight">“Run Into The Sun” debuted at #70 on the Hypeddit Top 100 Progressive House chart and climbed into the Top 30.</div>
+        <p>For Josh.P, music is not background noise. <strong>It is a conversation without words.</strong></p>
         <div class="chips">
           <span class="chip">Deep House</span>
           <span class="chip">Progressive House</span>
           <span class="chip">Melodic Techno</span>
+          <span class="chip">Latin Fusion</span>
           <span class="chip">Electro Hip Metal</span>
           <span class="chip">Folkor Dance</span>
         </div>
@@ -194,14 +262,18 @@
   </div>
 </section>
 
-<section id="photos">
+<section id="press">
   <div class="wrap">
-    <h2>Photos</h2>
-    <p class="sub">Press photos — free to use with credit “Josh.P”.</p>
+    <h2>Press</h2>
+    <p class="sub">Official photos — free to use with credit “Josh.P”. Full press kit below.</p>
     <div class="photos">
       <figure><img src="retrato.jpg" alt="Josh.P — portrait"></figure>
       <figure><img src="playa.jpg" alt="Josh.P — beach session"></figure>
       <figure class="tall"><img src="paris.jpg" alt="Josh.P — Paris"></figure>
+    </div>
+    <div class="center" style="margin-top:4px">
+      <a class="btn btn-primary" href="press-kit-joshp.zip" download>⬇ Download Press Kit (ZIP)</a>
+      <p style="margin-top:16px;color:var(--muted);font-size:.94rem">Latest press release: <a href="https://www.einpresswire.com/article/950017477/josh-p-invites-the-world-to-lose-track-of-time-with-this-rhythm-never-ends" target="_blank" rel="noopener">“Josh.P invites the world to lose track of time with This Rhythm Never Ends”</a></p>
     </div>
   </div>
 </section>
@@ -209,23 +281,37 @@
 <section class="alt" id="contact">
   <div class="wrap">
     <h2>Contact</h2>
-    <p class="sub">Booking, press and collaborations.</p>
-    <div class="contact-card">
-      <p>For press, booking and business inquiries:</p>
-      <a class="btn btn-primary" href="mailto:user.uid@sw-music.com">user.uid@sw-music.com</a>
-      <div class="socials" style="justify-content:center;margin-top:24px">
-        <a href="https://www.instagram.com/josh.p.artist" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.facebook.com/profile.php?id=1094753230390447" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://open.spotify.com/artist/2bjhXRDQhdMYNQyAMnSoBD" target="_blank" rel="noopener">Spotify</a>
-        <a href="https://soundcloud.com/josh-poficial" target="_blank" rel="noopener">SoundCloud</a>
+    <p class="sub">Direct lines — no forms.</p>
+    <div class="roles">
+      <div class="role">
+        <h3>Press</h3>
+        <p>Media, features and interviews.</p>
+        <a href="mailto:user.uid@sw-music.com">user.uid@sw-music.com</a>
       </div>
+      <div class="role">
+        <h3>Booking &amp; Business</h3>
+        <p>Shows, collaborations and licensing.</p>
+        <a href="mailto:user.uid@sw-music.com?subject=Booking%20—%20Josh.P">user.uid@sw-music.com</a>
+      </div>
+      <div class="role">
+        <h3>SwMusic Support</h3>
+        <p>The platform behind the music.</p>
+        <a href="mailto:support@sw-music.com">support@sw-music.com</a>
+      </div>
+    </div>
+    <div class="socials" style="justify-content:center;margin-top:30px">
+      <a href="https://www.instagram.com/josh.p.artist" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/1094753230390447" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://open.spotify.com/artist/2bjhXRDQhdMYNQyAMnSoBD" target="_blank" rel="noopener">Spotify</a>
+      <a href="https://soundcloud.com/josh-poficial" target="_blank" rel="noopener">SoundCloud</a>
+      <a href="https://sw-music.com" target="_blank" rel="noopener">SwMusic</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div>© 2026 Josh.P — All rights reserved.</div>
+    <div>© 2026 Josh.P — All rights reserved. · <a href="https://sw-music.com" target="_blank" rel="noopener" style="color:var(--muted)">sw-music.com</a></div>
     <div class="wm">POWERED BY SWMUSIC</div>
   </div>
 </footer>
