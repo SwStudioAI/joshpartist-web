@@ -28,6 +28,7 @@
     "https://www.instagram.com/josh.p.artist",
     "https://www.facebook.com/1094753230390447",
     "https://soundcloud.com/josh-poficial",
+    "https://www.youtube.com/@joshpoficial",
     "https://sw-music.com"
   ]
 }
@@ -121,6 +122,15 @@
   .live-line{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;text-align:center}
   .live-line p{color:var(--muted);margin-bottom:18px}
 
+  .videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+  .yt{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .yt .thumb{position:relative;cursor:pointer}
+  .yt .thumb img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+  .yt .thumb .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3.2rem;color:#fff;text-shadow:0 4px 26px rgba(0,0,0,.75);background:rgba(0,0,0,.18)}
+  .yt iframe{width:100%;aspect-ratio:16/9;border:0;display:block}
+  .yt .vid-title{padding:13px 16px;font-weight:600;font-size:.97rem}
+  .yt .vid-title small{display:block;color:var(--muted);font-weight:400;font-size:.83rem}
+
   footer{border-top:1px solid var(--line);padding:36px 0 46px;color:var(--muted);font-size:.9rem}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
   .wm{letter-spacing:.4em;color:#cfcfe0}
@@ -133,6 +143,7 @@
     <a class="brand" href="#top">JOSH<span>.</span>P</a>
     <div class="links">
       <a href="#music">Music</a>
+      <a href="#videos" class="hideS">Videos</a>
       <a href="#live" class="hideS">Live</a>
       <a href="#about">About</a>
       <a href="#press" class="hideS">Press</a>
@@ -159,6 +170,7 @@
         <a href="https://www.facebook.com/1094753230390447" target="_blank" rel="noopener">Facebook</a>
         <a href="https://open.spotify.com/artist/2bjhXRDQhdMYNQyAMnSoBD" target="_blank" rel="noopener">Spotify</a>
         <a href="https://soundcloud.com/josh-poficial" target="_blank" rel="noopener">SoundCloud</a>
+        <a href="https://www.youtube.com/@joshpoficial" target="_blank" rel="noopener">YouTube</a>
       </div>
     </div>
   </div>
@@ -223,6 +235,34 @@
 
     <div class="center">
       <a class="btn btn-ghost" href="https://soundcloud.com/josh-poficial" target="_blank" rel="noopener">Full catalog on SoundCloud →</a>
+    </div>
+  </div>
+</section>
+
+<section id="videos">
+  <div class="wrap">
+    <h2>Videos</h2>
+    <p class="sub">Official videos from the Josh.P YouTube channel.</p>
+    <div class="videos">
+      <div class="yt" data-id="b6eNzzv_Aks" data-title="A Sonic Escape: Memories in Every Beat">
+        <div class="thumb"><img src="https://i.ytimg.com/vi/b6eNzzv_Aks/hqdefault.jpg" alt="A Sonic Escape: Memories in Every Beat" loading="lazy"><span class="play">▶</span></div>
+        <div class="vid-title">A Sonic Escape: Memories in Every Beat<small>178K views · Most watched</small></div>
+      </div>
+      <div class="yt" data-id="EupTDUpMpxw" data-title="If Heaven Wrote Our Story (Official Video)">
+        <div class="thumb"><img src="https://i.ytimg.com/vi/EupTDUpMpxw/hqdefault.jpg" alt="If Heaven Wrote Our Story (Official Video)" loading="lazy"><span class="play">▶</span></div>
+        <div class="vid-title">If Heaven Wrote Our Story<small>Official Video · 45K views</small></div>
+      </div>
+      <div class="yt" data-id="5mzURWKoBh8" data-title="Madre Mi Confidente (Video Oficial)">
+        <div class="thumb"><img src="https://i.ytimg.com/vi/5mzURWKoBh8/hqdefault.jpg" alt="Madre Mi Confidente (Video Oficial)" loading="lazy"><span class="play">▶</span></div>
+        <div class="vid-title">Madre Mi Confidente<small>Video Oficial · 17K views</small></div>
+      </div>
+      <div class="yt" data-id="BeJN9S7kcZk" data-title="Soul Flying - Piano Ascension (Official Visualizer)">
+        <div class="thumb"><img src="https://i.ytimg.com/vi/BeJN9S7kcZk/hqdefault.jpg" alt="Soul Flying - Piano Ascension (Official Visualizer)" loading="lazy"><span class="play">▶</span></div>
+        <div class="vid-title">Soul Flying — Piano Ascension<small>Official Visualizer · 18K views</small></div>
+      </div>
+    </div>
+    <div class="center">
+      <a class="btn btn-ghost" href="https://www.youtube.com/@joshpoficial" target="_blank" rel="noopener">Watch more on YouTube →</a>
     </div>
   </div>
 </section>
@@ -304,6 +344,7 @@
       <a href="https://www.facebook.com/1094753230390447" target="_blank" rel="noopener">Facebook</a>
       <a href="https://open.spotify.com/artist/2bjhXRDQhdMYNQyAMnSoBD" target="_blank" rel="noopener">Spotify</a>
       <a href="https://soundcloud.com/josh-poficial" target="_blank" rel="noopener">SoundCloud</a>
+      <a href="https://www.youtube.com/@joshpoficial" target="_blank" rel="noopener">YouTube</a>
       <a href="https://sw-music.com" target="_blank" rel="noopener">SwMusic</a>
     </div>
   </div>
@@ -315,6 +356,20 @@
     <div class="wm">POWERED BY SWMUSIC</div>
   </div>
 </footer>
+
+<script>
+document.querySelectorAll('.yt .thumb').forEach(function(el){
+  el.addEventListener('click', function(){
+    var card = el.closest('.yt');
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + card.dataset.id + '?autoplay=1&rel=0';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture';
+    f.allowFullscreen = true;
+    f.title = card.dataset.title || 'YouTube video';
+    el.replaceWith(f);
+  });
+});
+</script>
 
 </body>
 </html>
