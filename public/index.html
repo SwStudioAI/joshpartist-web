@@ -58,6 +58,17 @@
       "url": "https://joshpartist.com/",
       "inLanguage": "en",
       "publisher": { "@id": "https://joshpartist.com/#artist" }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Josh.P — One More Sunrise (Official Music Video)",
+      "description": "One more sunrise, one more day. A single sunrise traveling around the world: Jamaica in the 80s and 90s, Africa, Ecuador in 2010 and today's New York. Reggae tech house by Josh.P.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/celcyAWioew/maxresdefault.jpg",
+      "uploadDate": "2026-11-09",
+      "duration": "PT4M43S",
+      "contentUrl": "https://www.youtube.com/watch?v=celcyAWioew",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/celcyAWioew",
+      "author": { "@id": "https://joshpartist.com/#artist" }
     }
   ]
 }
@@ -152,13 +163,34 @@
   .live-line p{color:var(--muted);margin-bottom:18px}
 
   .videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
-  .yt{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .yt{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .25s,transform .25s}
+  .yt:hover{border-color:rgba(255,198,92,.55);transform:translateY(-2px)}
   .yt .thumb{position:relative;cursor:pointer}
   .yt .thumb img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
   .yt .thumb .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3.2rem;color:#fff;text-shadow:0 4px 26px rgba(0,0,0,.75);background:rgba(0,0,0,.18)}
   .yt iframe{width:100%;aspect-ratio:16/9;border:0;display:block}
   .yt .vid-title{padding:13px 16px;font-weight:600;font-size:.97rem}
   .yt .vid-title small{display:block;color:var(--muted);font-weight:400;font-size:.83rem}
+  .yt.featured{margin-bottom:22px}
+  .yt.featured .thumb .play{font-size:4.6rem}
+  .yt.featured .vid-title{font-size:1.3rem;padding:16px 20px}
+  .yt.featured .vid-title small{font-size:.9rem}
+  .yt.featured .vid-title .newtag{color:var(--gold)}
+
+  .navsocial{display:flex;gap:15px;align-items:center;margin-left:6px}
+  .navsocial a{color:var(--muted);display:inline-flex;line-height:0}
+  .navsocial a:hover{color:var(--gold);text-decoration:none}
+  .navsocial svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  @media(max-width:900px){.navsocial{display:none}}
+
+  @keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.07)}}
+  header.hero .bgimg{animation:heroZoom 26s ease-in-out infinite alternate}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  .track,.feature,.role{transition:border-color .25s}
+  .track:hover,.feature:hover,.role:hover{border-color:rgba(255,198,92,.45)}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}header.hero .bgimg{animation:none}}
 
   footer{border-top:1px solid var(--line);padding:36px 0 46px;color:var(--muted);font-size:.9rem}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
@@ -177,6 +209,14 @@
       <a href="#about">About</a>
       <a href="#press" class="hideS">Press</a>
       <a href="#contact">Contact</a>
+      <div class="navsocial">
+        <a href="https://www.instagram.com/josh.p.artist" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37a4 4 0 1 1-7.914 1.174A4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://www.facebook.com/1094753230390447" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="https://www.youtube.com/@joshpoficial" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+        <a href="https://open.spotify.com/artist/2bjhXRDQhdMYNQyAMnSoBD" target="_blank" rel="noopener" aria-label="Spotify"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 15.5c2.7-.8 5.5-.5 8 .8M8.2 12.8c2.9-.9 6-.6 8.6.9M8.4 10.2c3.1-1 6.5-.6 9.3 1"/></svg></a>
+        <a href="https://soundcloud.com/josh-poficial" target="_blank" rel="noopener" aria-label="SoundCloud"><svg viewBox="0 0 24 24"><path d="M2.5 14v3M5.5 11v6M8.5 9v8M11.5 10v7"/><path d="M11.5 17h6.7a3.4 3.4 0 0 0 .8-6.7A5.5 5.5 0 0 0 8.4 8.9"/></svg></a>
+        <a href="mailto:user.uid@sw-music.com" aria-label="Email"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg></a>
+      </div>
       <a class="navcta" href="#latest">▶ Listen</a>
     </div>
   </div>
@@ -192,7 +232,7 @@
       <p class="tagline">Electronic music with purpose, where soul meets sound. <em>More than rhythm, it's a message.</em></p>
       <div class="cta">
         <a class="btn btn-primary" href="#latest">▶ Listen now</a>
-        <a class="btn btn-ghost" href="#music">Discography</a>
+        <a class="btn btn-ghost" href="#videos">▶ Watch</a>
       </div>
       <div class="socials">
         <a href="https://www.instagram.com/josh.p.artist" target="_blank" rel="noopener">Instagram</a>
@@ -281,22 +321,30 @@
   <div class="wrap">
     <h2>Videos</h2>
     <p class="sub">Official videos from the Josh.P YouTube channel.</p>
+    <div class="yt featured" data-id="celcyAWioew" data-title="Josh.P — One More Sunrise (Official Music Video)">
+      <div class="thumb"><img src="https://i.ytimg.com/vi/celcyAWioew/maxresdefault.jpg" alt="Josh.P — One More Sunrise (Official Music Video)" loading="lazy"><span class="play">▶</span></div>
+      <div class="vid-title">One More Sunrise<small>Official Music Video · <span class="newtag">New</span></small></div>
+    </div>
     <div class="videos">
-      <div class="yt" data-id="b6eNzzv_Aks" data-title="A Sonic Escape: Memories in Every Beat">
-        <div class="thumb"><img src="https://i.ytimg.com/vi/b6eNzzv_Aks/hqdefault.jpg" alt="A Sonic Escape: Memories in Every Beat" loading="lazy"><span class="play">▶</span></div>
-        <div class="vid-title">A Sonic Escape: Memories in Every Beat<small>178K views · Most watched</small></div>
+      <div class="yt" data-id="iWr80j8wRVM" data-title="Leading Me Back Home (Official Music Video)">
+        <div class="thumb"><img src="https://i.ytimg.com/vi/iWr80j8wRVM/hqdefault.jpg" alt="Leading Me Back Home (Official Music Video)" loading="lazy"><span class="play">▶</span></div>
+        <div class="vid-title">Leading Me Back Home<small>Official Music Video</small></div>
+      </div>
+      <div class="yt" data-id="b6eNzzv_Aks" data-title="A Sonic Escape: Memories That Never Fade">
+        <div class="thumb"><img src="https://i.ytimg.com/vi/b6eNzzv_Aks/hqdefault.jpg" alt="A Sonic Escape: Memories That Never Fade" loading="lazy"><span class="play">▶</span></div>
+        <div class="vid-title">A Sonic Escape: Memories That Never Fade<small>216K views · Most watched</small></div>
       </div>
       <div class="yt" data-id="EupTDUpMpxw" data-title="If Heaven Wrote Our Story (Official Video)">
         <div class="thumb"><img src="https://i.ytimg.com/vi/EupTDUpMpxw/hqdefault.jpg" alt="If Heaven Wrote Our Story (Official Video)" loading="lazy"><span class="play">▶</span></div>
-        <div class="vid-title">If Heaven Wrote Our Story<small>Official Video · 45K views</small></div>
+        <div class="vid-title">If Heaven Wrote Our Story<small>Official Video · 5.4K views</small></div>
       </div>
       <div class="yt" data-id="5mzURWKoBh8" data-title="Madre Mi Confidente (Video Oficial)">
         <div class="thumb"><img src="https://i.ytimg.com/vi/5mzURWKoBh8/hqdefault.jpg" alt="Madre Mi Confidente (Video Oficial)" loading="lazy"><span class="play">▶</span></div>
-        <div class="vid-title">Madre Mi Confidente<small>Video Oficial · 17K views</small></div>
+        <div class="vid-title">Madre Mi Confidente<small>Video Oficial · 7.7K views</small></div>
       </div>
       <div class="yt" data-id="BeJN9S7kcZk" data-title="Soul Flying - Piano Ascension (Official Visualizer)">
         <div class="thumb"><img src="https://i.ytimg.com/vi/BeJN9S7kcZk/hqdefault.jpg" alt="Soul Flying - Piano Ascension (Official Visualizer)" loading="lazy"><span class="play">▶</span></div>
-        <div class="vid-title">Soul Flying — Piano Ascension<small>Official Visualizer · 18K views</small></div>
+        <div class="vid-title">Soul Flying — Piano Ascension<small>Official Visualizer · 2.2K views</small></div>
       </div>
     </div>
     <div class="center">
@@ -325,6 +373,7 @@
       <div>
         <p><strong>Josh.P</strong> is an electronic music artist and producer based in Queens, New York, and the founder of <strong>SwMusic</strong> — an independent platform spanning streaming, radio, and immersive musical experiences. He creates without compromise, blending deep house, progressive house, melodic techno, and Latin fusion into something deeply personal: emotive piano lines, rolling basslines, and synths that lift somewhere higher.</p>
         <p>Through SwMusic he also builds the technology behind the music — a platform with Android, iOS and web apps. And with <strong>“No Kings in the Dark”</strong> he introduced <strong>Electro Hip Metal</strong>, a genre of his own creation.</p>
+        <p>His latest single, <strong>“One More Sunrise”</strong>, fuses reggae warmth with tech-house drive — one sunrise traveling from the Jamaica of the eighties and nineties to today's New York.</p>
         <div class="highlight">“Run Into The Sun” debuted at #70 on the Hypeddit Top 100 Progressive House chart and climbed into the Top 30.</div>
         <p>For Josh.P, music is not background noise. <strong>It is a conversation without words.</strong></p>
         <div class="chips">
@@ -332,6 +381,7 @@
           <span class="chip">Progressive House</span>
           <span class="chip">Melodic Techno</span>
           <span class="chip">Latin Fusion</span>
+          <span class="chip">Reggae Tech House</span>
           <span class="chip">Electro Hip Metal</span>
           <span class="chip">Folkor Dance</span>
         </div>
@@ -398,6 +448,14 @@
 </footer>
 
 <script>
+(function(){
+  var els = document.querySelectorAll('.feature,.track,.yt,.role,.live-line,.photos figure');
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  els.forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
+})();
 document.querySelectorAll('.yt .thumb').forEach(function(el){
   el.addEventListener('click', function(){
     var card = el.closest('.yt');
