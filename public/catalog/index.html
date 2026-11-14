@@ -1422,5 +1422,6 @@
 var q=document.getElementById('q'),rows=[].slice.call(document.querySelectorAll('#catTable tbody tr')),count=document.getElementById('count');
 q.addEventListener('input',function(){var v=q.value.toLowerCase(),n=0;rows.forEach(function(r){var show=r.textContent.toLowerCase().indexOf(v)>-1;r.style.display=show?'':'none';if(show)n++;});count.textContent=n;});
 </script>
+  <script src="/j7.js" defer></script>
 </body>
 </html>
